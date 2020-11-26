@@ -8,9 +8,6 @@
                         frame2.setAttribute("cols","1px,*");
                     } catch { }
     };
-    if (document.readyState === 'loading') {
-              window.addEventListener('DOMContentLoaded', fix, true);
-    } else {
           fix();
-    }
+
 })();
