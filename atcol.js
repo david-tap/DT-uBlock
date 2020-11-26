@@ -4,11 +4,10 @@
     if ( selector === '' || selector === '{{1}}' ) {
         return;
     }
-    const tag = '{{2}}';
     const fix = ev => {
                     if (ev) { window.removeEventListener(ev.type, fix, true); }
                     try {
-                        const element = document.getElementById(frame2);
+                        const element = document.getElementById(selector);
                             element.setAttribute("cols","1px,*");
                         }   
                     } catch { }
