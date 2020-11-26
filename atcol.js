@@ -1,14 +1,11 @@
 (() => {
     'use strict';
-    const selector = '{{1}}';
-    if ( selector === '' || selector === '{{1}}' ) {
-        return;
-    }
     const fix = ev => {
                     if (ev) { window.removeEventListener(ev.type, fix, true); }
                     try {
-                        const element = document.getElementById(selector);
-                            element.setAttribute("cols","1px,*");
+                        const framed = document.getElementById("PageContainerFrame");
+                        const frame2 = framed.contentWindow.document.getElementById("frame2")
+                        frame2.setAttribute("cols","1px,*")
                         }   
                     } catch { }
     };
